@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главный
+{% endblock %}
+
+ {% block body %}
+
+
+<div class="container">
+
+  <main class="px-3">
+      <h1>Добро пожаловать в магазин товаров</h1>
+      <img alt="" loading="lazy" decoding="async" data-nimg="fill" class="MainInfo_image__mV2D2" src="{{ url_for ('static', filename='image/прев.jpg') }}" >
+        <p class="lead">Мы продаем только лучшие товары!</p>
+      <p class="lead">
+
+      </p>
+  </main>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ article.title}}
+{% endblock %}
+
+{% block body %}
+
+
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+                <div class="card-body">
+                    <div class="mb-2">
+                                <h4 class="font-weight-semibold mb-2"> <a class="text-default mb-2" data-abc="true">{{ article.title}}</a> </h4>
+                            </div>
+                    <div > <img height="200px" src= {{ url_for ('static', filename='image/'+article.img) }} class="card-img img-fluid" width="200" height="35" alt=""> </div>
+                    </div>
+                        <div class="card-body bg-light text-center">
+
+
+
+                        <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                    <div class="text-muted mb-3"></div>
+                </div>
+            </div>
+    </div>
+    <div class="col">
+<div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{article.text}} /Рублей</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+
+              <li>{{ article.intro }}</li>
+            </ul>
+          </div>
+            <a href="/tovari/{{ article.id  }}/delete" class="btn btn-danger">Удалить</a>
+            <a href="/tovari/{{ article.id  }}/update" class="btn btn-success">Редактировать</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

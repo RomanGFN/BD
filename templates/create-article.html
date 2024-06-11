@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавить новый товар
+{% endblock %}
+
+ {% block body %}
+<div class="container mt-5">
+    <h1> Добавление товара  </h1>
+     <form method="post" enctype="multipart/form-data">
+         <input type="text" name="title" id="title" class="form-control" placeholder=" Введите название товара"><br>
+         <input type="text" name="category" id="category" class="form-control" placeholder=" Введите название группы"><br>
+         <input type="file" name="img" id="img" class="form-control" placeholder="Введите файл"><br>
+         <textarea name="intro" id="intro" class="form-control" placeholder="Введите информауию о товаре" ></textarea><br>
+         <textarea name="text" id="text" class="form-control" placeholder=" Введите цену товара" ></textarea><br>
+         <input type="submit" class="btn btn-success" value = "Отправить">
+     </form>
+
+
+ </div>
+{% endblock %}
+
+
